@@ -1,0 +1,45 @@
+var Page = {
+  setBodyColor:function(bgColor,color){
+    document.querySelector('body').style.backgroundColor=bgColor;
+    document.querySelector('body').style.color=color;
+  },
+  setLinksColor:function(color){
+    $('a').css("color",color);
+    // var a = document.getElementsByClassName('list');
+    // for(let i=0; i<a.length; i++){
+    //   a[i].style.color=color;
+    // }
+  },
+  setAColor:function(color){
+    document.querySelector('a').style.color=color;
+  }
+}
+function nightDayHandler(self){
+  if(self.value==='day'){
+    Page.setBodyColor('black','powderblue');
+    Page.setAColor('powderblue');
+    Page.setLinksColor('powderblue')
+    document.querySelector('input').src="night2.png";
+    document.querySelector('input').style.width="65px";
+    document.querySelector('input').style.height="65px";
+    document.querySelector('input').style.padding="15px";
+    if(document.getElementById('now')){
+      document.getElementById('now').style.color="blue";
+    }
+
+    self.value='night';
+  }
+  else{
+    Page.setBodyColor('white','black');
+    Page.setAColor('black');
+    Page.setLinksColor('black');
+    document.querySelector('input').src="day.png";
+    document.querySelector('input').style.width="100px";
+    document.querySelector('input').style.height="100px";
+      document.querySelector('input').style.padding="0px";
+    if(document.getElementById('now')){
+      document.getElementById('now').style.color="red";
+    }
+    self.value='day';
+  }
+}

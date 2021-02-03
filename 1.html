@@ -2,28 +2,64 @@
 <html lang="en" dir="ltr">
 
   <head>
-    <title>드라마 - 나의 아저씨</title>
+    <title>한빈TV - 나의 아저씨</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="page.js"></script>
 
   </head>
 
   <body>
+    <div class="head_container">
+      <script type="text/javascript">
+        let today = new Date();
 
-    <h1><a href="index.html">드라마</a></h1>
-    <div id="grid">
-      <ol>
-        <li  id="now"><a href="1.html"  id="now">나의 아저씨</a></li>
-        <li><a href="2.html">미스터 션샤인</a></li>
-        <li><a href="3.html">이태원 클라쓰</a></li>
-      </ol>
-      <div id="article">
-        <h2>나의 아저씨</h2>
-        <p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/HUQW58H2HI8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        let year = today.getFullYear(); // 년도
+        let month = today.getMonth() + 1;  // 월
+        let date = today.getDate();  // 날짜
+        let day = today.getDay();  // 요일
+
+        document.write("<div id=date>"+year + '년' + month + '월' + date +'일'+"</div>");
+      </script>
+      <h1 id="home"><a href="index.html">한빈TV</a></h1>
+      <div style="float:right">
+        <input type="image" value="day" src="day.png" onfocus="this.blur()" style="padding: none;width:100px; height:100px; margin-right:5px; float:right;" onclick="
+          nightDayHandler(this);
+          ">
+      </div>
+    </div>
+    <div class="menu_container">
+      <a href="1.html" class="list">나의 아저씨</a>
+      <a href="2.html" class="list">미스터 션샤인</a>
+      <a href="3.html" class="list">이태원 클라쓰</a>
+      <a href="4.html" class="list">고백부부</a>
+    </div>
+      <div class="main_container">
+        <h1 class="title">나의 아저씨</h1>
+        <p id="genre">드라마 | 15세이상 | 완결</p>
+        <p >
+          <iframe width="700" height="400" src="https://www.youtube.com/embed/HUQW58H2HI8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
-        <p>삶의 무게를 버티며 살아가는 <strong>아저씨</strong> 삼 형제와 거칠게 살아온 한 여성이 서로를 통해 삶을 <u>치유</u>하게 되는 이야기 </p>
+
+        <div class="info_container">
+          <span id="info">기본정보</span>
+          <span class="gray_bar"></span>
+          <span id="organ">편성</span>
+          <a id="broadcast" href="http://tvn.tving.com/tvn">tvN</a>
+          <span id="period">2018.03.21. ~ 2018.05.17.</span>
+          <span id="episode">16부작</span>
+          <span class="gray_bar"></span>
+          <span id="rate">시청률</span>
+          <span id="rate_percent">7.4%</span>
+          <span id="company">닐슨코리아 최고시청률</span>
+        </div>
+
+
+
         <img src="1.jpg" width="50%" height="500px">
+        <p>삶의 무게를 버티며 살아가는 <span id="my-adult" class="highlight">아저씨</span> 삼 형제와 거칠게 살아온 한 여성이 서로를 통해 삶을 <u>치유</u>하게 되는 이야기 </p>
+
       </div>
     </div>
 

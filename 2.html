@@ -5,24 +5,30 @@
     <title>드라마 - 미스터 션샤인</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="page.js"></script>
   </head>
 
   <body>
-
+    <div style="float:right">
+      <input id="night_day" type="button" value="day" onclick="
+        nightDayHandler(this);
+      ">
+    </div>
     <h1><a href="index.html">드라마</a></h1>
     <div id="grid">
       <ol>
-        <li><a href="1.html">나의 아저씨</a></li>
-        <li id="now"><a href="2.html" id="now">미스터 션샤인</a></li>
-        <li><a href="3.html">이태원 클라쓰</a></li>
+        <li><a href="1.html" class="list">나의 아저씨</a></li>
+        <li><a href="2.html" class="list" id="now">미스터 션샤인</a></li>
+        <li><a href="3.html" class="list">이태원 클라쓰</a></li>
+        <li><a href="3.html" class="list">고백부부</a></li>
       </ol>
       <div id="article">
         <h2>미스터 션샤인</h2>
         <p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/I4wVGuVm2HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
-        <p>신미양요(1871년) 때 군함에 승선해 미국에 떨어진 한 소년이 미국 군인 신분으로 자신을 버린 조국인 조선으로 돌아와 주둔하며 벌어지는 일을 그린 드라마 </p>
+        <p>신미양요(1871년) 때 군함에 승선해 미국에 떨어진 <span class="highlight">한 소년</span>이 미국 군인 신분으로 자신을 버린 조국인 조선으로 돌아와 주둔하며 벌어지는 일을 그린 드라마 </p>
         <img src="2.jpg" width="50%" height="500px">
 
       </div>

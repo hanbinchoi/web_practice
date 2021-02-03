@@ -5,23 +5,30 @@
     <title>드라마 - 이태원 클라쓰</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="page.js"></script>
   </head>
 
   <body>
+    <div style="float:right">
+      <input id="night_day" type="button" value="day" onclick="
+        nightDayHandler(this);
+      ">
+    </div>
     <h1><a href="index.html">드라마</a></h1>
     <div id="grid">
       <ol>
-        <li><a href="1.html">나의 아저씨</a></li>
-        <li><a href="2.html">미스터 션샤인</a></li>
-        <li id="now"><a href="3.html" id="now">이태원 클라쓰</a></li>
+        <li><a href="1.html" class="list">나의 아저씨</a></li>
+        <li><a href="2.html" class="list">미스터 션샤인</a></li>
+        <li><a href="3.html" class="list" id="now">이태원 클라쓰</a></li>
+        <li><a href="3.html" class="list">고백부부</a></li>
       </ol>
       <div id="article">
         <h2>이태원 클라쓰</h2>
         <p>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/r8FeCiNgers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
-        <p>불합리한 세상 속, 고집과 객기로 뭉친 청춘들의 '힙'한 반란이 시작된다. 세계를 압축해 놓은 듯한 이태원. 이 작은 거리, 각자의 가치관으로 자유를 쫓는 그들의 창업 신화 <이태원 클라쓰></p>
+        <p>불합리한 세상 속, 고집과 객기로 뭉친 청춘들의 <span class="highlight">'힙'</span>한 반란이 시작된다. 세계를 압축해 놓은 듯한 이태원. 이 작은 거리, 각자의 가치관으로 자유를 쫓는 그들의 창업 신화 <이태원 클라쓰></p>
         <img src="3.jpg" width="40%" height="500px">
 
       </div>
