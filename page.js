@@ -19,7 +19,7 @@ function nightDayHandler(self){
     Page.setBodyColor('black','powderblue');
     Page.setAColor('powderblue');
     Page.setLinksColor('powderblue')
-    document.querySelector('input').src="night2.png";
+    document.querySelector('input').src="img/night2.png";
     document.querySelector('input').style.width="65px";
     document.querySelector('input').style.height="65px";
     document.querySelector('input').style.padding="15px";
@@ -33,7 +33,7 @@ function nightDayHandler(self){
     Page.setBodyColor('white','black');
     Page.setAColor('black');
     Page.setLinksColor('black');
-    document.querySelector('input').src="day.png";
+    document.querySelector('input').src="img/day.png";
     document.querySelector('input').style.width="100px";
     document.querySelector('input').style.height="100px";
       document.querySelector('input').style.padding="0px";
