@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+.box{
+	width:100px;
+	height:100px;
+	background:red;
+}
+
+div.canvas{
+	width:500px;
+	height:500px;
+	position:relative;
+	border:3px solid blue;
+	overflow:hidden;
+}
+div.panel{
+	width:3000px;
+	position:absolute;
+	left:0;
+	top:0;
+	height:500px;
+}
+div.panel img{
+	width:500px;
+	height:500px;
+	float:left;
+}
+
+@keyframes slide{
+	from{
+		left:0;
+		}
+	10%{
+		left:0;
+	}
+	20%{
+		left:-500px;
+		}
+	30%{
+		left:-500px;
+		}		
+	40%{
+		left:-1000px;
+		}
+	50%{
+		left:-1000px;
+		}		
+	60%{
+		left:-1500px;
+		}
+	70%{
+		left:-1500px;
+		}		
+	80%{
+		left:-2000px;
+		}
+	100%{
+		left:-2000px;
+		}
+}
+
+div.panel{
+	animation-name:slide;
+	animation-duration:10s;
+	animation-direction:alternate;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease-out;
+}
+
+div.panel:hover{
+		animation-play-state:paused;
+}

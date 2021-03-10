@@ -1,0 +1,1 @@
+console.log("The following are terms of a legal agreement between you and HORIBA. By accessing, browsing, and/or using this website, you acknowledge that you have read, understood, and agree to be bound by these terms and to comply with all applicable laws and regulations. If you do not agree to these terms, do not use this website.".length);
