@@ -1,0 +1,25 @@
+{
+  "name": "web_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanbinchoi/web_practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanbinchoi/web_practice/issues"
+  },
+  "homepage": "https://github.com/hanbinchoi/web_practice#readme",
+  "dependencies": {
+    "sanitize-html": "^2.3.3"
+  }
+}
