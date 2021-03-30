@@ -115,7 +115,6 @@ a img{
 .content_container{
   display: grid;
   grid-template-columns: 30% 60%;
-  margin-left: 3%;
 }
 
 .info_container{
@@ -177,6 +176,17 @@ a img{
   font-size: 20px;
   font-weight: bold;
   margin-top: 2%;
+}
+.vidio_container{
+  display: grid;
+  margin-top: 10%;
+  grid-template-rows: 100%;
+  grid-template-columns: 50% 40%;
+}
+
+.comment_container{
+  display: grid;
+  margin-left: 10%;
 }
 #date{
   float: left;
@@ -327,6 +337,41 @@ input.img-button {
   filter: blur(2px);
 }
 
+.comment
+{
+  margin-top: 10%;
+  font-size: 25px;
+  border: none;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.row
+{
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  border-style: none;
+  width: 80%;
+  height: 400px;
+  overflow: auto;
+}
+
+.left {
+  width: 55%;
+  height: 100%;
+  border-style: none;
+  overflow: auto;
+  float: left;
+  background: #8977ad;
+}
+.right {
+  width: 40%;
+  float: right;
+  padding-left: 5%;
+  border-style: none;
+  overflow: auto;
+  height: 100%;
+}
 
 /* for touch screen devices */
 @media (hover: none) {
