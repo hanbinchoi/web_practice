@@ -54,3 +54,7 @@ function nightDayHandler(self){
     self.value='day';
   }
 }
+
+function createComment(self){
+  console.log("1");
+}

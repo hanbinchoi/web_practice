@@ -1,6 +1,6 @@
 module.exports =  {
 
-  HTML: function(title,page){
+  HTML: function(title,page,control){
     return   `
     <!doctype html>
     <html lang="en" dir="ltr">
@@ -10,6 +10,7 @@ module.exports =  {
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="page.js"></script>
+
       </head>
 
       <body>
@@ -40,15 +41,23 @@ module.exports =  {
         <div class="main_container">
           ${this.left_list()}
           ${this.main_contents(page)}
-          ${this.vidio(page)}
-
         </div>
-
+        ${this.vidio(page)}
+        ${control}
       </body>
 
     </html>
 
       `;
+  },
+  check:function(a,b){
+    var list = '';
+    var i=0;
+    while(i < a.length){
+      list = list + `<p>${a[i]}</p><p>${b[i]}</p>`
+      i = i + 1;
+    }
+    return list;
   },
   list:function(){
     var dramaName = ["나의 아저씨", "미스터 션샤인", "이태원 클라쓰"];
@@ -88,7 +97,7 @@ module.exports =  {
               <div class="rank_poster_container">
                 <span id="top_1">1st</span>
                 <article class="location-listing">
-                  <a class="location-title" href="1.html">나의 아저씨</a>
+                  <a class="location-title" href="/?id=my-adult">나의 아저씨</a>
                   <div class="location-image">
                     <a style="text-align:center;" href="#">
                       <img src="img/1.jpg" alt="나의 아저씨">
@@ -102,7 +111,7 @@ module.exports =  {
               <div class="rank_poster_container">
                 <span id="top_2">2nd</span>
                 <article class="location-listing">
-                  <a class="location-title" href="2.html">미스터 션샤인</a>
+                  <a class="location-title" href="/?id=mrSun">미스터 션샤인</a>
                   <div class="location-image">
                     <a style="text-align:center;" href="#">
                       <img src="img/2.jpg" alt="미스터 션샤인">
@@ -115,7 +124,7 @@ module.exports =  {
               <div class="rank_poster_container">
                 <span id="top_3">3rd</span>
                 <article class="location-listing">
-                  <a class="location-title" href="3.html">이태원 클라쓰</a>
+                  <a class="location-title" href="/?id=itaewon">이태원 클라쓰</a>
                   <div class="location-image">
                     <a style="text-align:center;" href="#">
                       <img src="img/3.jpg" alt="이태원 클라쓰">
@@ -420,19 +429,54 @@ module.exports =  {
     var vidio = '';
     if(page==='my-adult'){
       vidio =
-      `<iframe style="float:left; margin-top:10%;" width="50%" height="400" src="https://www.youtube.com/embed/HUQW58H2HI8" frameborder="0"  autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+      `  <h3 class = "comment">댓글</h3>
+        <div class="row">
+          <div class ='left'>
+            <iframe style="float:left;" width="100%" height="100%" src="https://www.youtube.com/embed/HUQW58H2HI8" frameborder="0"  autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen"></iframe>
+          </div>
+
+          <div class='right'>
+            <form id="board" action="/create_process" method="post">
+              <p><input type="text" name="title" placeholder="title"></p>
+              <p>
+                <textarea cols="60" rows="3" name="description" placeholder="description"></textarea>
+              </p>
+              <p>
+                <input type="submit" value="등록">
+              </p>
+            </form>
+          </div>
+        </div>`
     }
     else if(page===`mrSun`){
       vidio =
-      `  <iframe style="float:left; margin-top:10%;" width="50%" height="400" src="https://www.youtube.com/embed/I4wVGuVm2HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      `<h3 class = "comment">댓글</h3>
+      <div class="row">
+        <div class ='left'>
+          <iframe style="float:left;" width="100%" height="100%" src="https://www.youtube.com/embed/I4wVGuVm2HU" frameborder="0"  autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen"></iframe>
+        </div>
+        <div class='right'>
+          right
+        </div>
+      </div>
       `
     }
     else if(page===`itaewon`){
       vidio =
-      `<iframe style="float:left; margin-top:10%;" width="50%" height="400" src="https://www.youtube.com/embed/r8FeCiNgers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+      `<h3 class = "comment">댓글</h3>
+      <div class="row">
+        <div class ='left'>
+          <iframe style="float:left;" width="100%" height="100%" src="https://www.youtube.com/embed/r8FeCiNgers" frameborder="0"  autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen"></iframe>
+        </div>
+        <div class='right'>
+          right
+        </div>
+      </div>`
     }
+
     return vidio;
   }
+
 
 
 }
